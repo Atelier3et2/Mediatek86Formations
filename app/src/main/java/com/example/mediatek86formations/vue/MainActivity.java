@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.mediatek86formations.R;
+import com.example.mediatek86formations.*;
 import com.example.mediatek86formations.controleur.Controle;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
      * initialisations
      */
     private void init(){
-        Controle.getInstance();
+        Controle.getInstance(this);
         creerMenu();
+        onRestart();
     }
 
     /**
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void creerMenu(){
         ecouteMenu((ImageButton)findViewById(R.id.btnFormations), FormationsActivity.class);
+        ecouteMenu((ImageButton)findViewById(R.id.btnFavoris), FavoriActivity.class);
     }
 
     /**
@@ -46,9 +48,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Activity activity = MainActivity.this;
                 Intent intent = new Intent(activity, classe);
+
                 activity.startActivity(intent);
             }
         });
+
     }
 
 }

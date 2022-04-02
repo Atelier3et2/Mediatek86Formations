@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/33767/MediaTek86Formations/app/src/main/res/layout/activity_formations.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/33767/MediaTek86Formations/app/src/main/res/layout/activity_main.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/33767/MediaTek86Formations/app/src/main/res/layout/activity_une_formation.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/33767/MediaTek86Formations/app/src/main/res/layout/activity_video.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/33767/MediaTek86Formations/app/src/main/res/layout/layout_liste_formations.xml" value="0.11041666666666666" />
         <entry key="..\:/test/testAndroidStudio2021/MediaTek86Formations/app/src/main/res/layout-land/activity_video.xml" value="0.3375" />
         <entry key="..\:/test/testAndroidStudio2021/MediaTek86Formations/app/src/main/res/layout/activity_formations.xml" value="0.33697916666666666" />
         <entry key="..\:/test/testAndroidStudio2021/MediaTek86Formations/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -12,6 +17,10 @@
         <entry key="..\:/test/testAndroidStudio2021/MediaTek86Formations/app/src/main/res/layout/layout_liste_formations.xml" value="0.33697916666666666" />
       </map>
     </option>
+  </component>
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../../../javadoc" />
+    <option name="OTHER_OPTIONS" value="-encoding utf8 -docencoding utf8 -charset utf8" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

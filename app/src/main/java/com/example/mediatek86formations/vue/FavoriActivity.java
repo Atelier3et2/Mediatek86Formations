@@ -18,7 +18,8 @@ import com.example.mediatek86formations.modele.Formation;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class FormationsActivity extends AppCompatActivity {
+public class FavoriActivity extends AppCompatActivity {
+
 
     private Controle controle;
     private Button btnFiltrer;
@@ -35,29 +36,30 @@ public class FormationsActivity extends AppCompatActivity {
     /**
      * initialisations
      */
-    private void init(){
+    private void init() {
         controle = Controle.getInstance(null);
         btnFiltrer = (Button) findViewById(R.id.btnFiltrer);
         txtFiltre = (EditText) findViewById(R.id.txtFiltre);
-        lesFormations = controle.getLesFormations();
-        controle.setFavoriWindow(false);
+        // On récupere la liste des favoris pour valoriser l'adapter
+        lesFormations = controle.getLesFavoris();
+        controle.setFavoriWindow(true);
         ecouteFiltre();
         creerListe();
 
     }
 
     /**
-     * Procedure evenementielle sur le filtre
+     * procedure evenementielle sur le bouton Filtre
      */
-    private void ecouteFiltre(){
+
+    private void ecouteFiltre() {
         btnFiltrer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(txtFiltre.getText().toString() != "") {
-                    lesFormations = controle.getLesFormationFiltre(txtFiltre.getText().toString());
-                }
-                else{
-                    lesFormations = controle.getLesFormations();
+                if (txtFiltre.getText().toString() != "") {
+                    lesFormations = controle.getLesFavorisFiltre(txtFiltre.getText().toString());
+                } else {
+                    lesFormations = controle.getLesFavoris();
                 }
                 creerListe();
             }
@@ -65,18 +67,31 @@ public class FormationsActivity extends AppCompatActivity {
         });
 
     }
+
     /**
      * création de la liste adapter
      */
-    private void creerListe(){
+    private void creerListe() {
 
-        if(lesFormations != null){
+        if (lesFormations != null) {
             Collections.sort(lesFormations, Collections.<Formation>reverseOrder());
-            ListView listView = (ListView)findViewById(R.id.lstFormations);
-            FormationListAdapter adapter = new FormationListAdapter(lesFormations,FormationsActivity.this);
+            ListView listView = (ListView) findViewById(R.id.lstFormations);
+            FormationListAdapter adapter = new FormationListAdapter(lesFormations, FavoriActivity.this);
             listView.setAdapter(adapter);
         }
 
     }
 
+
+
+
+
+
+
+
+
+
+
 }
+
+

@@ -1,7 +1,7 @@
 package com.example.mediatek86formations.vue;
 
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.mediatek86formations.R;
+import com.example.mediatek86formations.*;
 import com.example.mediatek86formations.controleur.Controle;
 import com.example.mediatek86formations.modele.Formation;
 import com.example.mediatek86formations.outils.MesOutils;
@@ -29,7 +29,7 @@ public class UneFormationActivity extends AppCompatActivity {
      * Remplissage des objets graphiques
      */
     private void init(){
-        Controle controle = Controle.getInstance();
+        Controle controle = Controle.getInstance(null);
         TextView txtPublishedAt = (TextView) findViewById(R.id.txtPublishedAt);
         TextView txtTitle = (TextView) findViewById(R.id.txtTitle);
         TextView txtDescription = (TextView) findViewById(R.id.txtDescription);

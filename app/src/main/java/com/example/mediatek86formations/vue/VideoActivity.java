@@ -7,7 +7,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
-import com.example.mediatek86formations.R;
+import com.example.mediatek86formations.*;
 import com.example.mediatek86formations.controleur.Controle;
 import com.example.mediatek86formations.modele.Formation;
 
@@ -29,7 +29,7 @@ public class VideoActivity extends AppCompatActivity {
      * Affichage  de la vidéo
      */
     private void init(){
-        Controle controle = Controle.getInstance();
+        Controle controle = Controle.getInstance(null);
         Formation formation = controle.getFormation();
         if(formation!=null) {
             wbvYoutube = findViewById(R.id.wbvYoutube);
